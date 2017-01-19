@@ -1,0 +1,12 @@
+[ 2017-01-15T16:12:10+08:00 ] 127.0.0.1 /Home/Menu/mouth_words
+ERR: Unable to load template file '\ThinkPHP3\ThinkPHP\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2017-01-15T16:12:42+08:00 ] 127.0.0.1 /Home/Menu/mouth_words
+ERR: Unable to load template file '\ThinkPHP3\ThinkPHP\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2017-01-15T16:12:46+08:00 ] 127.0.0.1 /Home/Menu/mouth_words
+ERR: Unable to load template file '\ThinkPHP3\ThinkPHP\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2017-01-15T19:00:07+08:00 ] 127.0.0.1 /Home/Menu/$user_info.headimgurl
+ERR: 非法操作:$user_info.headimgurl
+

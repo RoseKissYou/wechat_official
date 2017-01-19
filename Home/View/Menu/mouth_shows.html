@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>星座宣言</title>
+    <link href="{$smarty.const.CSS_URL}mouth_word_css.css" rel="stylesheet" type="text/css"  />
+</head>
+<body>
+<div class="content">
+
+    <h1 class="head-title" style="text-align: center;height:40px;" >我是 {$mouth_type}</h1></br>
+    <h5 class="nick-name" style="text-align: center;height:40px;">昵称:{$mouth_info.nickname}</h5>
+    </br>
+    <img class="logo-img" align="center" style=" width: 20%;height:20%"  src="{$mouth_info.headimgurl}"></br>
+    <h3 class="head-title" style="text-align: center;height:40px;" >星座宣言</h3>
+    <p>{$mouth_words}</p>
+
+</div>
+
+<script type="text/javascript" src="{$smarty.const.JS_URL}jquery-1.12.3.min.js"></script>
+
+<p id="page_footer" style="text-align: center;color: #a9a9a9;;">Copyright 2013 - 2017 广州百姓堂药业连锁有限公司,All rights reserved</p>
+</body>
+</html>

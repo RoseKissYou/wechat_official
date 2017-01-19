@@ -1,0 +1,1 @@
+a:5:{i:0;s:7:"user_id";i:1;s:9:"user_name";i:2;s:11:"create_time";s:3:"_pk";s:7:"user_id";s:5:"_type";a:3:{s:7:"user_id";s:7:"int(10)";s:9:"user_name";s:11:"varchar(60)";s:11:"create_time";s:7:"int(31)";}}

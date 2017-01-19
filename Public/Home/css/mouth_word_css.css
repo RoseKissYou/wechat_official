@@ -1,0 +1,39 @@
+
+/*全局input宽度90% 高度66px*/
+
+.content{
+    margin-top: 100px;
+}
+.content input{
+
+    width:90%;
+    height:40px;
+}
+/*  标题  */
+.con-title{
+
+}
+
+.txt-birth{
+
+}
+
+.submit-btn{
+
+}
+/*  显示界面--------------------------- */
+
+/*  标题  */
+.head-title{
+    text-align: center;
+}
+/*  呢称  */
+.nick-name{
+    text-align: center;
+}
+
+.logo-img{
+    width: 20%;height: 20%;text-align: center;
+}
+
+
