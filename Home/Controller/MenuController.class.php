@@ -53,10 +53,85 @@ class MenuController extends Controller {
 
         $this->display();
     }
+    /*水印图片  ( 底图名字/路径, 水印图片名字/路径, 生成图片名字
+ * @author xiongan
+ * */
+   public function water_image($back_img,$water_img,$head_name){
+        //1 获取底图和水印图片
+        $bg_img =  imagecreatefromstring(file_get_contents($back_img));
+        $we_img = imagecreatefromstring(file_get_contents($water_img));
+        //2 获取底图和水印图片高度
+        list($bg_img_w,$bg_img_h) = getimagesize($back_img);
+        list($we_img_w,$we_img_h) = getimagesize($water_img);
+        //3 合并图片   $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 92,$bg_img_h - $we_img_h - 32, 0,0,$we_img_w,$we_img_h,60);
+        $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 110,$bg_img_h - $we_img_h - 52, 0,0,165,165,90);
+        list($bg_img_w,$bg_img_h,$bg_img_type) = getimagesize($back_img);
+        switch($bg_img_type){
+            case 1://GIF
+                imagegif($bg_img,IMGS_URL.$head_name.'.gif');     //生成图片
+                header('Content-Type: image/gif');                  //显示图片到页面
+                imagegif($bg_img);
+                break;
+            case 2://JPG
+                imagejpeg($bg_img, IMGS_URL.$head_name.'.jpg');  //生成图片
+                header('Content-Type: image/jpeg');
+                imagejpeg($bg_img);
+                break;
+            case 3://PNG
+                imagepng($bg_img, IMGS_URL.$head_name.'.png');  //生成图片
+                header('Content-Type: image/png');
+                imagepng($bg_img);
+                break;
+            default:
+                break;
+
+        }
+        //销毁图片
+        imagedestroy($bg_img);
+        imagedestroy($we_img);
+
+        return $water_bool;
+    }
+    public function mouth_shows(){
+        $back_img = IMGS_URL.'contellation.jpg';   $water_img = IMGS_URL.'code.jpg'; $head_name= $_POST['nickname'].time();
+        //1 获取底图和水印图片
+        $bg_img =  imagecreatefromstring(file_get_contents($back_img));
+        $we_img = imagecreatefromstring(file_get_contents($water_img));
+        //2 获取底图和水印图片高度
+        list($bg_img_w,$bg_img_h) = getimagesize($back_img);
+        list($we_img_w,$we_img_h) = getimagesize($water_img);
+        //3 合并图片   $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 92,$bg_img_h - $we_img_h - 32, 0,0,$we_img_w,$we_img_h,60);
+        $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 110,$bg_img_h - $we_img_h - 52, 0,0,165,165,90);
+        list($bg_img_w,$bg_img_h,$bg_img_type) = getimagesize($back_img);
+        switch($bg_img_type){
+            case 1://GIF
+                imagegif($bg_img,IMGS_URL.$head_name.'.gif');     //生成图片
+                header('Content-Type: image/gif');                  //显示图片到页面
+                imagegif($bg_img);
+                break;
+            case 2://JPG
+                imagejpeg($bg_img, IMGS_URL.$head_name.'.jpg');  //生成图片
+                header('Content-Type: image/jpeg');
+                imagejpeg($bg_img);
+                break;
+            case 3://PNG
+                imagepng($bg_img, IMGS_URL.$head_name.'.png');  //生成图片
+                header('Content-Type: image/png');
+                imagepng($bg_img);
+                break;
+            default:
+                break;
+
+        }
+        //销毁图片
+        imagedestroy($bg_img);
+        imagedestroy($we_img);
+        exit;
+    }
     /*处理用户输入的信息,返回星座宣言
      *
      * */
-    public function mouth_shows(){
+    public function mouth_shows_bak(){
 
         $user_mouth = $_POST['txtBirth'];
         $user_day = $_POST['txtBirthday'];
@@ -98,8 +173,27 @@ class MenuController extends Controller {
 
         switch($constellation){
             case 1:{
-                $mouth_words = '水瓶座的人很聪明，他们最大的特点是创新，追求独一无二的生活，个人主义色彩很浓重的星座。他们对人友善又注重隐私。水瓶座绝对算得上是“友谊之星”，他喜欢结交每一类朋友，但是确很难与他们交心，那需要很长的时间。他们对自己的家人就显得冷淡和疏远很多了。';
-                $mouth_type = '水瓶座';
+                // 选择显示底图文件
+//                $water_code =  self::water_image(IMGS_URL.'contellation.jpg',IMGS_URL.'code.jpg',$_POST['nickname'].time());
+                $back_img = IMGS_URL.'contellation.jpg';   $water_img = IMGS_URL.'code.jpg'; $head_name= $_POST['nickname'].time();
+                $bg_img =  imagecreatefromstring(file_get_contents($back_img));
+                $we_img = imagecreatefromstring(file_get_contents($water_img));
+                //2 获取底图和水印图片高度
+                list($bg_img_w,$bg_img_h) = getimagesize($back_img);
+                list($we_img_w,$we_img_h) = getimagesize($water_img);
+                //3 合并图片   $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 92,$bg_img_h - $we_img_h - 32, 0,0,$we_img_w,$we_img_h,60);
+                $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 110,$bg_img_h - $we_img_h - 52, 0,0,165,165,90);
+                list($bg_img_w,$bg_img_h,$bg_img_type) = getimagesize($back_img);
+                imagejpeg($bg_img, IMGS_URL.$head_name.'.jpg');  //生成图片
+                header('Content-Type: image/jpeg');
+                imagejpeg($bg_img);
+//销毁图片
+                imagedestroy($bg_img);
+                imagedestroy($we_img);
+
+
+//                $mouth_words = '水瓶座的人很聪明，他们最大的特点是创新，追求独一无二的生活，个人主义色彩很浓重的星座。他们对人友善又注重隐私。水瓶座绝对算得上是“友谊之星”，他喜欢结交每一类朋友，但是确很难与他们交心，那需要很长的时间。他们对自己的家人就显得冷淡和疏远很多了。';
+//                $mouth_type = '水瓶座';
             }
                 break;
             case 2:{
@@ -171,20 +265,25 @@ class MenuController extends Controller {
     }
 
 
-    public function mouth_words_temp(){
-        //测试跳转到index
-        //  U('/Menu/add_answer'
-        echo 'hello 游客';
-        $data_array = array(
-            'nickname'=>'aeball',
-            'sex'=>2,
-            'headimgurl'=>'httpweburl'
-        );
-      //  $this->redirect('New/category', array('cate_id' => 2), 5, '页面跳转中...');
-        $this->redirect('Home/Menu/get_redirect',$data_array);
+    public function img_deal(){
+        $image = new \Think\Image();
+        $image->open('./code.jpg');
+//        $image->open(IMGS_URL.'contellation.jpg');
 
-//        $this->display('index');
+//        $ae_img = new \Think\Image();
+//        $img_path = IMGS_URL.'contellation.jpg';
+//        var_dump($img_path);exit;
+//        $ae_img->open(IMGS_URL.'contellation.jpg');
+//
+//        $width = $ae_img->width(); // 返回图片的宽度
+//        $height = $ae_img->height(); // 返回图片的高度
+//        $type = $ae_img->type(); // 返回图片的类型
+//        $mime = $ae_img->mime(); // 返回图片的mime类型
+//        $size = $ae_img->size(); // 返回图片的尺寸数组 0 图片宽度 1 图片高度
+//        var_dump($size);
+        $this->display('index');
     }
+
 
     public function get_redirect(){
       //  $input_get = filter_input_array(INPUT_GET, FILTER_UNSAFE_RAW);
