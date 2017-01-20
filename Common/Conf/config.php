@@ -25,7 +25,7 @@ return array(
     'SESSION_AUTO_START' => true, //是否开启session
        // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
     // 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE  模式); 3 (兼容模式)  默认为PATHINFO 模式
-  //  'SHOW_PAGE_TRACE' => true  ,  // 让页面显示追踪信息
+    'SHOW_PAGE_TRACE' => true  ,  // 让页面显示追踪信息
 
 
 
@@ -37,6 +37,6 @@ return array(
     'TMPL_ENGINE_TYPE'      =>  'Smarty',     // 默认模板引擎 以下设置仅对使用Think模板引擎有效
 
     // 全局配置文件
-    'LAYOUT_ON'=>true,
-    'LAYOUT_NAME'=>'layout',
+//    'LAYOUT_ON'=>true,
+//    'LAYOUT_NAME'=>'layout',
 );

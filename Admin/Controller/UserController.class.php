@@ -2,13 +2,39 @@
 namespace Admin\Controller;
 use Model\UserModel;
 use Think\Controller;
+use Think\Think;
+
 class UserController extends Controller {
     public function index(){
-        $appid = 'wxf3fe799737d9c242';
-        // header('location:https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri=http%3a%2f%2fweixing.lazhuwang.com.cn%2fAdmin%2fUser%2fcheck_user&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect');
-        //     https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf3fe799737d9c242&redirect_uri=http%3a%2f%2fweixing.lazhuwang.com.cn%2fAdmin%2fUser%2fcheck_user&response_type=code&scope=snsapi_base&state=123#wechat_redirect
-        header('location:https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf3fe799737d9c242&redirect_uri=http%3a%2f%2fweixing.lazhuwang.com.cn%2fGetWxUserInfo.php&response_type=code&scope=snsapi_base&state=123#wechat_redirect');
+        $this->assign('lang',L());
+        $this->display();
+    }
+    /*
+     * 用户登陆
+     * @author xiongan
+     * */
+    public function login(){
+        $this->display();
+    }
+    /*
+     * 验证码
+     * */
+    public function verify_img(){
+        $verify = new \Think\Verify();
+        $verify->entry();
+        // 查看是否存在该类
+//        var_dump($verify);
 
+    }
+    /*
+     * 图片处理
+     * */
+    public function img_deal(){
+        $image_deal = new \Think\Image();
+        $image_path = '';
+        $image_deal->open(IMGS_URL.'bg.jpg');
+
+        var_dump($image_deal);
     }
     public function show_users(){
         $sql_user = new \Model\UserModel();

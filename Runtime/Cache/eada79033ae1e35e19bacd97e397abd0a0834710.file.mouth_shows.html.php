@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-01-18 19:10:22
+<?php /* Smarty version Smarty-3.1.6, created on 2017-01-19 16:32:57
          compiled from "D:/php/www/ThinkPHP3/wechat_official/Home/View\Menu\mouth_shows.html" */ ?>
 <?php /*%%SmartyHeaderCode:11884587b563791cd89-89267277%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eada79033ae1e35e19bacd97e397abd0a0834710' => 
     array (
       0 => 'D:/php/www/ThinkPHP3/wechat_official/Home/View\\Menu\\mouth_shows.html',
-      1 => 1484737806,
+      1 => 1484786024,
       2 => 'file',
     ),
   ),
@@ -37,14 +37,14 @@ mouth_word_css.css" rel="stylesheet" type="text/css"  />
 <body>
 <div class="content">
 
-    <h1 class="head-title" >我是 <?php echo $_smarty_tpl->tpl_vars['mouth_type']->value;?>
+    <h1 class="head-title" style="text-align: center;height:40px;" >我是 <?php echo $_smarty_tpl->tpl_vars['mouth_type']->value;?>
 </h1></br>
-    <h5 class="nick-name">昵称:<?php echo $_smarty_tpl->tpl_vars['mouth_info']->value['nickname'];?>
+    <h5 class="nick-name" style="text-align: center;height:40px;">昵称:<?php echo $_smarty_tpl->tpl_vars['mouth_info']->value['nickname'];?>
 </h5>
     </br>
-    <img class="logo-img" align="center"  src="<?php echo $_smarty_tpl->tpl_vars['mouth_info']->value['headimgurl'];?>
+    <img class="logo-img" align="center" style=" width: 20%;height:20%"  src="<?php echo $_smarty_tpl->tpl_vars['mouth_info']->value['headimgurl'];?>
 "></br>
-    <h3 class="head-title" >星座宣言</h3>
+    <h3 class="head-title" style="text-align: center;height:40px;" >星座宣言</h3>
     <p><?php echo $_smarty_tpl->tpl_vars['mouth_words']->value;?>
 </p>
 
