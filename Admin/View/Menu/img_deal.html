@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--上传图片  发送给自己接收-->
+<form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
+
+    <table >
+        <tr>
+            <td>商品名称</td>
+            <td>
+                <input type="text" class="shop_name" name="shop_name" />
+            </td>
+        </tr>
+        <tr>
+            <td>商品价格</td>
+            <td>
+                <input type="text" class="shop-name" />
+            </td>
+        </tr>
+        <tr>
+        <td>商品数量</td>
+        <td>
+            <input type="text" class="shop_count" name="shop_count" />
+        </td>
+    </tr>
+
+        <tr>
+            <td>上传图片</td>
+            <td>
+                <input type="file" class="shop-img" name="shop_img">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="upload-img">
+            </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>

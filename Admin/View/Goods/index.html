@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+
+</head>
+<body>
+<h2>商品显示列表</h2>
+
+<a href="{U('/Admin/Goods/add')}">添加商品</a>
+<table width="100%" cellspacing="0" class="dataTable">
+
+    <tr class="tatr1">
+
+        <td width="10%">商品id</td>
+        <td width="10%" >商品icon</td>
+        <td width="20%">商品货号</td>
+        <td width="30%">商品名称</td>
+        <td width="20%">商品价格</td>
+        <td width="10%">操作</td>
+    </tr>
+    <!--{foreach from=$results item=result}-->
+
+    <tr class="tatr1">
+
+        <td width="10%">{$result.goods_id}</td>
+        <td>
+            <img width="60px" height="60px" src="{$smarty.const.PUBLIC_URL}{$result.goods_img}">
+        </td>
+        <td width="20%">{$result.goods_sn}</td>
+        <td width="30%">{$result.goods_name}</td>
+        <td width="20%">{$result.goods_price}</td>
+        <td width="10%">操作</td>
+    </tr>
+
+
+<!--{foreachelse}-->
+没有数据
+<!--{/foreach}-->
+</table>
+</body>
+</html>

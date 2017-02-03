@@ -1,0 +1,238 @@
+[ 2017-01-20T09:13:29+08:00 ] 127.0.0.1 /Home/User/mouth_shows
+ERR: 非法操作:mouth_shows
+
+[ 2017-01-20T09:17:03+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] imagejpeg(http://wechat.official.mmt/Public/Home/imgs/aeball1484875023.jpg): failed to open stream: HTTP wrapper does not support writeable connections D:\php\www\ThinkPHP3\wechat_official\Home\Controller\MenuController.class.php 第 113 行.
+
+[ 2017-01-20T09:26:56+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: mouth_type D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 42 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 42 行.
+NOTIC: [8] Undefined index: mouth_info D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 44 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 44 行.
+NOTIC: [8] Undefined index: mouth_info D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 47 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 47 行.
+NOTIC: [8] Undefined index: mouth_words D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T10:17:43+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: mouth_type D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 42 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 42 行.
+NOTIC: [8] Undefined index: mouth_info D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 44 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 44 行.
+NOTIC: [8] Undefined index: mouth_info D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 47 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 47 行.
+NOTIC: [8] Undefined index: mouth_words D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T10:20:21+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T10:20:50+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T10:22:16+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: mouth_type D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 42 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 42 行.
+NOTIC: [8] Undefined index: mouth_info D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 44 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 44 行.
+NOTIC: [8] Undefined index: mouth_info D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 47 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 47 行.
+NOTIC: [8] Undefined index: mouth_words D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\ThinkPHP3\wechat_official\Runtime\Cache\eada79033ae1e35e19bacd97e397abd0a0834710.file.mouth_shows.html.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T10:23:59+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T10:25:28+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T10:38:10+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-20T10:40:15+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-20T10:41:04+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T10:44:07+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-20T10:56:49+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] imagejpeg(http://wechat.official.mmt/Public/Home/imgs/aeball.jpg): failed to open stream: HTTP wrapper does not support writeable connections D:\php\www\ThinkPHP3\wechat_official\Home\Controller\MenuController.class.php 第 164 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T11:01:15+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] imagejpeg(http://wechat.official.mmt/Public/Home/imgs/qqqqqqqqqqqqq.jpg): failed to open stream: HTTP wrapper does not support writeable connections D:\php\www\ThinkPHP3\wechat_official\Home\Controller\MenuController.class.php 第 165 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-20T11:03:33+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] imagejpeg(http://wechat.official.mmt/Public/Home/imgs/qqqqqqqqqqqqq.jpg): failed to open stream: HTTP wrapper does not support writeable connections D:\php\www\ThinkPHP3\wechat_official\Home\Controller\MenuController.class.php 第 165 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-20T11:11:57+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T11:14:19+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-20T11:15:06+08:00 ] 127.0.0.1 /Home/Menu/mouth_shows.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

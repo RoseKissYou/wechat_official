@@ -1,0 +1,43 @@
+[ 2017-02-03T10:12:27+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 不存在的图像文件
+
+[ 2017-02-03T10:12:54+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 不存在的图像文件
+
+[ 2017-02-03T10:17:38+08:00 ] 127.0.0.1 /Admin/Menu/upload
+ERR: Unable to load template file '\ThinkPHP3\ThinkPHP\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2017-02-03T10:53:09+08:00 ] 127.0.0.1 /Admin/Index/img_deal
+ERR: 非法操作:img_deal
+
+[ 2017-02-03T10:53:16+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: Syntax Error in template "D:/php/www/ThinkPHP3/wechat_official/Admin/View\Menu\img_deal.html"  on line 31 "&lt;/html&gt;" unclosed {foreach} tag
+
+[ 2017-02-03T11:19:33+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 1146:Table 'aeball_blog.ae_menu' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ae_menu`
+
+[ 2017-02-03T11:20:49+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 1146:Table 'aeball_blog.ae_menu' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ae_menu`
+
+[ 2017-02-03T11:20:50+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 1146:Table 'aeball_blog.ae_menu' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ae_menu`
+
+[ 2017-02-03T11:21:18+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 1146:Table 'aeball_blog.ae_menu' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ae_menu`
+
+[ 2017-02-03T11:21:27+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 1146:Table 'aeball_blog.ae_menu' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ae_menu`
+
+[ 2017-02-03T11:21:55+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 1146:Table 'aeball_blog.ae_menu' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ae_menu`
+
+[ 2017-02-03T11:21:57+08:00 ] 127.0.0.1 /Admin/Menu/img_deal
+ERR: 1146:Table 'aeball_blog.ae_menu' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ae_menu`
+

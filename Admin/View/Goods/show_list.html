@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品显示列表</title>
+</head>
+<body>
+<h2>商品显示列表</h2>
+
+    <table width="100%" cellspacing="0" class="dataTable">
+
+        <tr class="tatr1">
+            <td hidden="hidden">编号</td>
+            <td>登陆账号</td>
+            <td>原始ID</td>
+            <td>公司名称</td>
+            <td >公众号业务分类</td>
+
+        </tr>
+    <!--{foreach from=$results item=result}-->
+
+        <tr class="tatr1">
+            <td hidden="hidden">编号</td>
+            <td>登陆账号</td>
+            <td>原始ID</td>
+            <td>公司名称</td>
+            <td >公众号业务分类</td>
+
+        </tr>
+
+</table>
+<!--{foreachelse}-->
+没有数据
+<!--{/foreach}-->
+</body>
+</html>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-01-19 18:40:42
+<?php /* Smarty version Smarty-3.1.6, created on 2017-02-03 10:49:19
          compiled from "D:/php/www/ThinkPHP3/wechat_official/Admin/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:23360587830d8a0a535-26541341%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e86f9c65b1792b61ecf7353a6054465b03d9ab62' => 
     array (
       0 => 'D:/php/www/ThinkPHP3/wechat_official/Admin/View\\Index\\index.html',
-      1 => 1484822392,
+      1 => 1486090152,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_587830d8a3933',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_587830d8a3933')) {function content_587830d8a3933($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_587830d8a3933')) {function content_587830d8a3933($_smarty_tpl) {?>
+<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -35,6 +36,9 @@ admin.css">
 jquery.js"></script>
 </head>
 <body style="background-color:#f2f9fd;">
+<include file="<?php echo @HTML_URL;?>
+header.html" />
+
 <div class="header bg-main">
     <div class="logo margin-big-left fadein-top">
         <h1><img src="<?php echo @IMGS_AURL;?>
@@ -83,8 +87,9 @@ y.jpg" class="radius-circle rotate-hover" height="50" alt="" />后台管理中�
 <div class="admin">
     <iframe scrolling="auto" rameborder="0" src="info.html" name="right" width="100%" height="100%"></iframe>
 </div>
+
 <div style="text-align:center;">
-    <p>来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+    <p>来源:<a href="http://www.mycodes.net/" target="_blank">百姓堂</a></p>
 </div>
 </body>
 </html><?php }} ?>

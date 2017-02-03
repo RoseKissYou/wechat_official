@@ -64,6 +64,9 @@ class IndexController extends Controller {
     public function info(){
         $this->display();
     }
+    public function head(){
+        $this->display('head');
+    }
 
 
 }

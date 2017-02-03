@@ -27,8 +27,6 @@ return array(
     // 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE  模式); 3 (兼容模式)  默认为PATHINFO 模式
     'SHOW_PAGE_TRACE' => true  ,  // 让页面显示追踪信息
 
-
-
     /*模板引擎更换
       // 布局设置  可以更改为smarty引擎
     'TMPL_ENGINE_TYPE'      =>  'Think',     // 默认模板引擎 以下设置仅对使用Think模板引擎有效

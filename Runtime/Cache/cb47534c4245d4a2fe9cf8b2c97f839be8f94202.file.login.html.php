@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-01-19 18:29:40
+<?php /* Smarty version Smarty-3.1.6, created on 2017-01-20 09:08:20
          compiled from "D:/php/www/ThinkPHP3/wechat_official/Admin/View\User\login.html" */ ?>
 <?php /*%%SmartyHeaderCode:1713158808e57298da3-65433850%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cb47534c4245d4a2fe9cf8b2c97f839be8f94202' => 
     array (
       0 => 'D:/php/www/ThinkPHP3/wechat_official/Admin/View\\User\\login.html',
-      1 => 1484821765,
+      1 => 1484874497,
       2 => 'file',
     ),
   ),
@@ -65,8 +65,8 @@ tmbg-white.png')">
                         <div class="form-group">
                             <div class="field">
                                 <input type="text" class="input input-big" name="code" placeholder="填写右侧的验证码" data-validate="required:请填写右侧的验证码" />
-                                <img src="<?php echo @IMGS_AURL;?>
-passcode.jpg" alt="" width="100" height="32" class="passcode" style="height:43px;cursor:pointer;" onclick="this.src=this.src+'?'">
+                                <img src="<?php echo @SITE_URL;?>
+Admin/User/verify_img" alt="" width="100" height="32" class="passcode" style="height:43px;cursor:pointer;" onclick="this.src=this.src+'?'">
 
                             </div>
                         </div>

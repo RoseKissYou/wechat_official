@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加图片</title>
+</head>
+<body>
+<form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
+
+    <table>
+        <tr>
+            <th style="width: 30%">商品货号:</th>
+            <td style="width: 50%">
+                <input type="text" name="goods_sn">
+            </td>
+        </tr></br>
+        <tr>
+            <th style="width: 30%">商品名称:</th>
+            <td style="width: 50%">
+                <input type="text" name="goods_name">
+            </td>
+        </tr></br>
+        <tr>
+            <th style="width: 30%">商品价格:</th>
+            <td style="width: 50%">
+                <input type="text" name="goods_price">
+            </td>
+        </tr></br>
+
+
+        <tr>
+            <th style="width: 30%"> goods_img:</th>
+            <td style="width: 50%">
+                <input type="file" name="goods_img">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="upload-img">
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>

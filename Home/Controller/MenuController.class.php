@@ -2,6 +2,10 @@
 namespace Home\Controller;
 use Think\Controller;
 class MenuController extends Controller {
+    //
+    private $_user_bg_img;  //用户星座图片名称
+    private $_user_nickname;  //用户呢称
+    private $_user_head;       //用户头像
     public function index(){
         echo 'hhhhhhh';
         $answer_connet = new \Model\AnswersModel();
@@ -49,51 +53,74 @@ class MenuController extends Controller {
             'sex'                =>2         ,
             'headimgurl'        =>'http://tva2.sinaimg.cn/crop.3.0.634.634.1024/cd516b22jw8fa4mlfynwzj20hs0hm0tr.jpg'
         );
+        // 水印呢称
+        // 1 选择底图
+        $back=imagecreatefromjpeg(IMGS_URL.'base12.jpg');
+        // 2 设置水印字体颜色
+        $color=imagecolorallocate($back, 0, 255, 0);
+        // 水印文字操作
+        $water_text =  imagettftext($back, 20, 0, 92, 138, $color, "simkai.ttf", '时间,你好');
+        imagejpeg($back, IMGS_URL.time().'.jpg');  //生成图片
+        imagedestroy($back);
         $this->assign('user_info', $user_info);
 
         $this->display();
     }
-    /*水印图片  ( 底图名字/路径, 水印图片名字/路径, 生成图片名字
- * @author xiongan
- * */
-   public function water_image($back_img,$water_img,$head_name){
-        //1 获取底图和水印图片
-        $bg_img =  imagecreatefromstring(file_get_contents($back_img));
-        $we_img = imagecreatefromstring(file_get_contents($water_img));
-        //2 获取底图和水印图片高度
-        list($bg_img_w,$bg_img_h) = getimagesize($back_img);
-        list($we_img_w,$we_img_h) = getimagesize($water_img);
-        //3 合并图片   $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 92,$bg_img_h - $we_img_h - 32, 0,0,$we_img_w,$we_img_h,60);
-        $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 110,$bg_img_h - $we_img_h - 52, 0,0,165,165,90);
-        list($bg_img_w,$bg_img_h,$bg_img_type) = getimagesize($back_img);
-        switch($bg_img_type){
-            case 1://GIF
-                imagegif($bg_img,IMGS_URL.$head_name.'.gif');     //生成图片
-                header('Content-Type: image/gif');                  //显示图片到页面
-                imagegif($bg_img);
-                break;
-            case 2://JPG
-                imagejpeg($bg_img, IMGS_URL.$head_name.'.jpg');  //生成图片
-                header('Content-Type: image/jpeg');
-                imagejpeg($bg_img);
-                break;
-            case 3://PNG
-                imagepng($bg_img, IMGS_URL.$head_name.'.png');  //生成图片
-                header('Content-Type: image/png');
-                imagepng($bg_img);
-                break;
-            default:
-                break;
 
-        }
-        //销毁图片
-        imagedestroy($bg_img);
-        imagedestroy($we_img);
-
-        return $water_bool;
-    }
+    //  mouth_shows
     public function mouth_shows(){
-        $back_img = IMGS_URL.'contellation.jpg';   $water_img = IMGS_URL.'code.jpg'; $head_name= $_POST['nickname'].time();
+
+        $user_mouth = $_POST['txtBirth'];
+        $user_day = $_POST['txtBirthday'];
+        $constellation = 0;
+
+        switch($user_mouth){
+            case 1: $constellation = ($user_day >= 20) ? 1 : 12; // 水瓶座(>=20) 1.20-2.18
+                break;
+            case 2:$constellation = ($user_day >= 19) ? 2 : 1;  //双鱼座 (>=19) 2.19-3.20
+                break;
+            case 3:$constellation = ($user_day >=21) ? 3 : 2;  //白羊座 (>=21) 3.21-4.19
+                break;
+            case 4:$constellation = ($user_day >=20) ? 4 : 3;  //金牛座 (>=20) 4.20-5.20
+                break;
+            case 5:$constellation = ($user_day >=21) ? 5 : 4;  //双子座 (>=21) 5.21-6.21
+                break;
+            case 6:$constellation = ($user_day >=22) ? 6 : 5;  //巨蟹座 (>=22) 6.22-7.22
+                break;
+            case 7:$constellation = ($user_day >=23) ? 7 : 6;  //狮子座 (>=23) 7.23-8.22
+                break;
+            case 8: $constellation = ($user_day >=23) ? 8 : 7;  //处女座 (>=23 8.23-9.22
+                break;
+            case 9: $constellation = ($user_day >=23) ? 9 : 8;  //天秤座 (>=23) 9.23-10.23
+                break;
+            case 10: $constellation = ($user_day >=24) ? 10: 9;  //天蝎座 (>=24)10.24-11.22
+                break;
+            case 11: $constellation = ($user_day >=23) ? 11: 10;  //射手座 (>=23) 11.23-12.21
+                break;
+            case 12: $constellation = ($user_day >=22) ? 12: 11;  //摩羯座 (>=22)12.22-1.19
+                break;
+            default:
+                echo '星座不存在';
+                break;
+        }
+        // 根据不同的星座选择不同的背景图片
+        if(!empty($constellation)){
+            // $con_img = 'base'.$constellation.'.jpg';
+            $con_img = 'base12.jpg';
+        }
+
+        $this->assign('bg_img', $con_img);
+        $this->assign('user_info',$_POST);
+        //    self::mark_text(IMGS_URL.$con_img,$_POST['nickname'],92,138,$_POST['nickname']);
+//        exit;
+        $this->display();
+    }
+    public function mouth_img(){
+        $back_img = IMGS_URL.$_GET['bg_img'] ;  // $water_img = IMGS_URL.'code.jpg';
+        $water_img = $_GET['head_img'];
+        $head_name=$_GET['bg_img'].time();
+
+
         //1 获取底图和水印图片
         $bg_img =  imagecreatefromstring(file_get_contents($back_img));
         $we_img = imagecreatefromstring(file_get_contents($water_img));
@@ -102,22 +129,26 @@ class MenuController extends Controller {
         list($we_img_w,$we_img_h) = getimagesize($water_img);
         //3 合并图片   $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 92,$bg_img_h - $we_img_h - 32, 0,0,$we_img_w,$we_img_h,60);
         $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 110,$bg_img_h - $we_img_h - 52, 0,0,165,165,90);
+
         list($bg_img_w,$bg_img_h,$bg_img_type) = getimagesize($back_img);
         switch($bg_img_type){
             case 1://GIF
                 imagegif($bg_img,IMGS_URL.$head_name.'.gif');     //生成图片
                 header('Content-Type: image/gif');                  //显示图片到页面
                 imagegif($bg_img);
+//                $img_result =  imagegif($bg_img);
                 break;
             case 2://JPG
                 imagejpeg($bg_img, IMGS_URL.$head_name.'.jpg');  //生成图片
                 header('Content-Type: image/jpeg');
                 imagejpeg($bg_img);
+//                $img_result =  imagejpeg($bg_img);
                 break;
             case 3://PNG
                 imagepng($bg_img, IMGS_URL.$head_name.'.png');  //生成图片
                 header('Content-Type: image/png');
                 imagepng($bg_img);
+//                $img_result =  imagepng($bg_img);
                 break;
             default:
                 break;
@@ -126,7 +157,20 @@ class MenuController extends Controller {
         //销毁图片
         imagedestroy($bg_img);
         imagedestroy($we_img);
-        exit;
+      //  return $img_result;
+//        exit;
+    }
+    // 水印文字
+     public function mark_text($background, $text, $x, $y,$img_name){
+        // 1 选择底图
+        $back=imagecreatefromjpeg($background);
+        // 2 设置水印字体颜色
+        $color=imagecolorallocate($back, 0, 255, 0);
+        // 水印文字操作
+        $water_text =  imagettftext($back, 20, 0, $x, $y, $color, "simkai.ttf", $text);
+        imagejpeg($back, IMGS_URL.$img_name.'.jpg');  //生成图片
+        imagedestroy($back);
+        return $water_text;
     }
     /*处理用户输入的信息,返回星座宣言
      *
@@ -292,6 +336,46 @@ class MenuController extends Controller {
         echo $_GET['headimgurl'];
 
         $this->display('index');
+    }
+    /*水印图片  ( 底图名字/路径, 水印图片名字/路径, 生成图片名字
+* @author xiongan
+* */
+    public function water_image($back_img,$water_img,$head_name){
+        //1 获取底图和水印图片
+        $bg_img =  imagecreatefromstring(file_get_contents($back_img));
+        $we_img = imagecreatefromstring(file_get_contents($water_img));
+        //2 获取底图和水印图片高度
+        list($bg_img_w,$bg_img_h) = getimagesize($back_img);
+        list($we_img_w,$we_img_h) = getimagesize($water_img);
+        //3 合并图片   $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 92,$bg_img_h - $we_img_h - 32, 0,0,$we_img_w,$we_img_h,60);
+        $water_bool = imagecopymerge($bg_img,$we_img,$bg_img_w - $we_img_w - 110,$bg_img_h - $we_img_h - 52, 0,0,165,165,90);
+        list($bg_img_w,$bg_img_h,$bg_img_type) = getimagesize($back_img);
+        switch($bg_img_type){
+            case 1://GIF
+                imagegif($bg_img,IMGS_URL.$head_name.'.gif');     //生成图片
+                header('Content-Type: image/gif');                  //显示图片到页面
+                $img_result = imagegif($bg_img);
+                break;
+            case 2://JPG
+                imagejpeg($bg_img, IMGS_URL.$head_name.'.jpg');  //生成图片
+                header('Content-Type: image/jpeg');
+                $img_result =  imagejpeg($bg_img);
+
+                break;
+            case 3://PNG
+                imagepng($bg_img, IMGS_URL.$head_name.'.png');  //生成图片
+                header('Content-Type: image/png');
+                $img_result = imagepng($bg_img);
+                break;
+            default:
+                break;
+
+        }
+        //销毁图片
+        imagedestroy($bg_img);
+        imagedestroy($we_img);
+
+        return $img_result;
     }
 
 

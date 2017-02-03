@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-01-19 16:32:16
+<?php /* Smarty version Smarty-3.1.6, created on 2017-01-20 10:17:38
          compiled from "D:/php/www/ThinkPHP3/wechat_official/Home/View\Menu\mouth_words.html" */ ?>
 <?php /*%%SmartyHeaderCode:31273587b37bf197108-80008063%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7d4ba817ddb73b33f37411d4cd0e7ec06924e01' => 
     array (
       0 => 'D:/php/www/ThinkPHP3/wechat_official/Home/View\\Menu\\mouth_words.html',
-      1 => 1484785988,
+      1 => 1484876441,
       2 => 'file',
     ),
   ),
@@ -57,8 +57,8 @@ mobiscroll.js" type="text/javascript"></script>
     <div class="content" style="text-align: center;margin-top: 100px;width:90%;">
         <label class="con-title" style="">星座物语</label></br>
 
-        <input placeholder="请输入出生月份(阳历)" style="text-align: center;height:40px;" class="txt-birth" type="text"   name="txtBirth" /><br/>
-        <input placeholder="请输入出生月份(阳历)"  style="text-align: center;height:40px;" class="txt-birthday" type="text"   name="txtBirthday" /><br/>
+        <input placeholder="请输入出生月份(阳历)" style="text-align: center;height:40px;" class="txt-birth" type="text"   name="txtBirth" required="" /><br/>
+        <input placeholder="请输入出生月份(阳历)"  style="text-align: center;height:40px;" class="txt-birthday" type="text"   name="txtBirthday" required="" /><br/>
         <input  hidden="hidden"  name="nickname" value="<?php echo $_smarty_tpl->tpl_vars['user_info']->value['nickname'];?>
 "><br/>
         <input hidden="hidden"   name="sex" value="<?php echo $_smarty_tpl->tpl_vars['user_info']->value['sex'];?>

@@ -16,8 +16,6 @@ class UserController extends Controller {
         header('location:https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.$redirect_url.'oauth.php&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect');
 
     }
-    // 测试连接
-    //   https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf3fe799737d9c242&redirect_uri=http%3a%2f%2fweixing.lazhuwang.com.cn%2foauth.php&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect
 
     public function index_bak(){
         $sql_user = new \Model\UserModel();
